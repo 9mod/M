@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>سؤال خطير</title>
+</head>
+<body style="text-align:center; font-family:Arial; direction:rtl; margin-top:100px;">
+    <h2>مين أحلى وحدة في الكون؟</h2>
+    <input type="text" id="answer" placeholder="اكتب إجابتك هنا">
+    <button onclick="checkAnswer()">إرسال</button>
+
+    <p id="response" style="margin-top:20px; font-size:18px; color:darkblue;"></p>
+
+    <script>
+        function checkAnswer() {
+            const input = document.getElementById("answer").value.trim();
+            const response = document.getElementById("response");
+
+            if (input === "أنا") {
+                response.innerText = "مين انتي؟";
+            } else if (input === "ساره" || input === "أنا ساره") {
+                response.innerText = "الي تزرق الخياره؟";
+            } else {
+                response.innerText = "إجابة غير متوقعة!";
+            }
+        }
+    </script>
+</body>
+</html>
+
